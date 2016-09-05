@@ -1,11 +1,11 @@
-var gulp = requie('gulp'),
+var gulp = require('gulp'),
     browserify = require('gulp-browserify'),
     webserver  = require('gulp-webserver');
 
 var src =  './process',
     app =  './app';
 
-gulp.tast('js' , function(){
+gulp.task('js' , function(){
     return gulp.src(src + '/js/app.js')
     .pipe(browserify({
         transform: 'reactify',
@@ -24,7 +24,7 @@ gulp.task('html' ,function(){
 })
 
 gulp.task('css' , function(){
-    gulp.src(app + '/css/*.css');s
+    gulp.src(app + '/css/*.css');
 })
 
 gulp.task('watch' , function(){
@@ -34,4 +34,12 @@ gulp.task('watch' , function(){
 
 })
 
+gulp.task('webserver' , function(){
+    gulp.src(app + '/')
+        .pipe(webserver({
+            livereload: true,
+            open: true
+        }));
+});
 
+gulp.task('default' , ['watch', 'html' , 'js' , 'css' ,'webserver']);
