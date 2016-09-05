@@ -13,12 +13,17 @@ var MainInterface = React.createClass({
         if(this.state.show){
             showTitle = "Less"
         }
+
+        var displayList ={
+            display: this.state.show ? 'block':none,
+            color: 'red'
+        }
         return (
             <div className="World">
             <h1 > { showTitle }
                 {this.state.title}  </h1>
             
-                <ul>
+                <ul style= {displayList}>
                     <li>London (BST)</li>
                 </ul>
             </div>
