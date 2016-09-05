@@ -3,7 +3,15 @@ var ReactDOM = require('react-dom');
 
 var MainInterface = React.createClass({
     render: function(){
-        return <h1 class="ui teal header"> World Cities </h1>
+        return (
+            <div className="World">
+            <h1 > World Cities </h1>
+            
+                <ul>
+                    <li>London (BST)</li>
+                </ul>
+            </div>
+            )
     }
 });
 
