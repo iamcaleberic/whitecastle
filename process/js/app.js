@@ -46,15 +46,22 @@ var MainInterface = React.createClass({
         }
     },
     render: function(){
-        
+        var allCities = this.state.data;
+        // iterate/map through all cities
+        allCities = allCities.map(function(item , index){
+            return(
+                  <div className="item" >
+                  <div className="header" key= {index}>  {this.state.data[index].name}</div>
+                  <div className="description" key= {index}>{this.state.data[index].description}</div> 
+                  <div className="right floated" key= {index}>{this.state.data[index].country}</div>
+                </div>
+            )// return
+
+        }.bind(this));
         return (
             <div className="World">
-                <div className="ui list">
-                <div className="item">
-                  <div className="header">  {this.state.data[0].name}</div>
-                  <div className="description">{this.state.data[0].description}</div> 
-                  <div className="right floated">{this.state.data[0].country}</div>
-                </div>
+                <div className="ui relaxed divided list" >
+                    {allCities}
                 </div>
             </div>
             )
@@ -63,5 +70,5 @@ var MainInterface = React.createClass({
 
 ReactDOM.render(
     <MainInterface/>,
-    document.getElementById('data')
+    document.getElementById('data') // target element
 );
