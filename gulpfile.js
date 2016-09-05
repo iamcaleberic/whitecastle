@@ -27,3 +27,11 @@ gulp.task('css' , function(){
     gulp.src(app + '/css/*.css');s
 })
 
+gulp.task('watch' , function(){
+    gulp.watch(src + '/js/**/*.js' , ['js']);
+    gulp.watch(app + '/css/**/*.css', ['css']);
+    gulp.watch([app + '/**/*.html'], ['html']);
+
+})
+
+
