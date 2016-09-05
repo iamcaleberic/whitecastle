@@ -50,11 +50,11 @@ var MainInterface = React.createClass({
         // iterate/map through all cities
         allCities = allCities.map(function(item , index){
             return(
-                  <div className="item" >
-                  <div className="header" key= {index}>  {this.state.data[index].name}</div>
-                  <div className="description" key= {index}>{this.state.data[index].description}</div> 
-                  <div className="right floated" key= {index}>{this.state.data[index].country}</div>
-                </div>
+                  <div className="item"  key= {index} >
+                        <div className="header">  {this.state.data[index].name}</div>
+                        <div className="description" >{this.state.data[index].description}</div> 
+                        <div className="right floated" >{this.state.data[index].country}</div>
+                  </div>
             )// return
 
         }.bind(this));
