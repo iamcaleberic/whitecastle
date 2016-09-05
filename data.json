@@ -1,0 +1,33 @@
+[
+{
+    "name":"Stockholm",
+    "country":"Sweden",
+    "language":"Swedish"
+},
+{
+    "name":"London",
+    "country":"England",
+    "language":"English"
+},
+{
+    "name":"Berlin",
+    "country":"Germany",
+    "language":"German"
+},
+
+{
+    "name":"Osaka",
+    "country":"Japan",
+    "language":"Japanese"
+},
+{
+    "name":"Hong Kong",
+    "country":"China",
+    "language":"English/Chinese"
+}, 
+{
+    "name":"St. Petersburg",
+    "country":"Russia",
+    "language":"Russian"
+}
+]
