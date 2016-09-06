@@ -67,7 +67,14 @@ var MainInterface = React.createClass({
             )
     }
 });
+var cityList = React.createClass({
+    render:function(){
 
+        return(
+            
+        )
+    }
+})
 ReactDOM.render(
     <MainInterface/>,
     document.getElementById('city') // target element
