@@ -5,6 +5,11 @@ var CityList = React.createClass({
 
         return(
              <div className="item"  >
+                <div className="left floated">
+                    <button onClick={handleDelete} className=" circular ui red icon button">
+                        <i className="ban icon"></i>
+                    </button>
+                </div>
                 <div className="header">  {this.props.singleItem.name}</div>
                 <div className="description" >{this.props.singleItem.description}</div> 
                 <div className="right floated" >{this.props.singleItem.country}</div>
