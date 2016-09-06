@@ -15,18 +15,18 @@ var AddCity =  React.createClass({
                 <a className="ui  orange right ribbon  label" onClick = { this.toggleCityDisplay }>Add city</a> 
                 <div className="ui container" >
                 
-                    <form className="ui basic form" >
+                    <form className="ui basic form" onSubmit={this.handleAdd} >
                         <div className="ui field">
                             <label>City</label>
-                            <input name="city" placeholder="City" type="text"/>
+                            <input name="city" placeholder="City" type="text" ref="city"/>
                         </div>
                         <div className=" field">
                             <label>Description</label>
-                            <input name="Description" placeholder="Description" type="text"/>
+                            <input name="Description" placeholder="Description" type="text" ref="description"/>
                         </div>
                         <div className="field">
                             <label>Country</label>
-                            <input name="Country" placeholder="Country" type="text"/>
+                            <input name="Country" placeholder="Country" type="text" ref="country"/>
                         </div>
                     
                         <button className="ui green icon button" type="submit">
