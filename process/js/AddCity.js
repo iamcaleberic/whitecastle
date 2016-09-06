@@ -1,12 +1,21 @@
 var React =  require('react');
 
 var AddCity =  React.createClass({
+    toggleCityDisplay: function(){
+            this.props.handleToggle();
+        },
     render: function(){
+      
+        var displayCityBody = {
+            display: this.props.cityBodyVisible ? 'block' : 'none'
+        };
+
         return (
-            <div className="ui raised basic form segment">
-                <a className="ui orange right ribbon label">Add city</a> 
-                <div className="ui container">
-                    <form class="ui basic form">
+            <div className="ui raised basic form segment" >
+                <a className="ui  orange right ribbon  label" onClick = { this.toggleCityDisplay }>Add city</a> 
+                <div className="ui container" >
+                
+                    <form className="ui basic form" >
                         <div className="ui field">
                             <label>City</label>
                             <input name="city" placeholder="City" type="text"/>
@@ -25,6 +34,7 @@ var AddCity =  React.createClass({
                              Add city
                         </button>
                     </form>
+              
                 </div>
               </div>
         )

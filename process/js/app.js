@@ -9,6 +9,7 @@ var AddCity  = require('./AddCity')
 var MainInterface = React.createClass({
     getInitialState: function(){
         return {
+        cityBodyVisible: false,
         data: [
                 {
                     "name":"Stockholm",
@@ -52,14 +53,21 @@ var MainInterface = React.createClass({
     },
 
     deleteMessage: function(item){
-        var totalCities =  this.state.data
+        var totalCities =  this.state.data;
         // lodash return array without passed item
         var newCities   =  _.without(totalCities , item)
         this.setState({
             data: newCities
         });
-    }
-    ,
+    },
+
+    toggleAddDisplay: function(){
+        var tempVisibility = !this.state.cityBodyVisible;
+        this.setState({
+            cityBodyVisible: tempVisibility
+        });
+    }, 
+
     render: function(){
         var allCities = this.state.data;
         // iterate/map through all cities
@@ -75,9 +83,11 @@ var MainInterface = React.createClass({
         }.bind(this));
         return (
             <div className="World">
-                <AddCity/>
+                <AddCity
+                    bodyVisible = { this.state.cityBodyVisible }
+                    handleToggle = {this.toggleAddDisplay}
+                />
                 <div className="ui relaxed divided list" >
-
                     {allCities}
                 </div>
             </div>

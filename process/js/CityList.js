@@ -10,7 +10,6 @@ var CityList = React.createClass({
 
         return(
              <div className="item"  >
-             
                 <div className="left floated">
                     <button onClick={this.handleDelete} className=" circular ui red icon button">
                         <i className="ban icon"></i>
