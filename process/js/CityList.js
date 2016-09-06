@@ -1,6 +1,11 @@
 var React = require('react');
 
 var CityList = React.createClass({
+    
+    handleDelete: function(){
+        this.props.onDelete(this.props.whichItem)
+    },
+
     render:function(){
 
         return(

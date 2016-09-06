@@ -54,7 +54,10 @@ var MainInterface = React.createClass({
         allCities = allCities.map(function(item , index){
             return(
                  <CityList key ={index}
-                singleItem = {item}/> 
+                           singleItem = {item} 
+                           whichItem = {item}
+                           onDelete = {this.deleteMessage}
+                    />
             )// return
 
         }.bind(this));
