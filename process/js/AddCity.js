@@ -4,6 +4,17 @@ var AddCity =  React.createClass({
     toggleCityDisplay: function(){
             this.props.handleToggle();
         },
+
+    handleAdd: function(e){
+        var tempItem ={
+            city: this.refs.City.value,
+            description: this.refs.Description.value,
+            country: this.refs.Country.value
+        }
+        e.preventDefault();
+        this.props.addCity(tempItem);
+    },
+
     render: function(){
       
         var displayCityBody = {
@@ -18,15 +29,15 @@ var AddCity =  React.createClass({
                     <form className="ui basic form" onSubmit={this.handleAdd} >
                         <div className="ui field">
                             <label>City</label>
-                            <input name="city" placeholder="City" type="text" ref="city"/>
+                            <input name="city" placeholder="City" type="text" ref="City"/>
                         </div>
                         <div className=" field">
                             <label>Description</label>
-                            <input name="Description" placeholder="Description" type="text" ref="description"/>
+                            <input name="Description" placeholder="Description" type="text" ref="Description"/>
                         </div>
                         <div className="field">
                             <label>Country</label>
-                            <input name="Country" placeholder="Country" type="text" ref="country"/>
+                            <input name="Country" placeholder="Country" type="text" ref="Country"/>
                         </div>
                     
                         <button className="ui green icon button" type="submit">
