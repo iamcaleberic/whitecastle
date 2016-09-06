@@ -1,6 +1,6 @@
 var React =  require('react');
 var ReactDOM = require('react-dom');
-var _ = reqiure('lodash');
+var _ = require('lodash');
 
 //import external subcomponent
 var CityList = require('./CityList');
@@ -50,8 +50,13 @@ var MainInterface = React.createClass({
         }
     },
 
-    deleteMessage: function(){
-        
+    deleteMessage: function(item){
+        var totalCities =  this.state.data
+        // lodash return array without passed item
+        var newCities   =  _.without(totalCities , item)
+        this.setState({
+            data: newCities
+        });
     }
     ,
     render: function(){
