@@ -4,6 +4,7 @@ var _ = require('lodash');
 
 //import external subcomponent
 var CityList = require('./CityList');
+var AddCity  = require('./AddCity')
 
 var MainInterface = React.createClass({
     getInitialState: function(){
@@ -74,7 +75,9 @@ var MainInterface = React.createClass({
         }.bind(this));
         return (
             <div className="World">
+                <AddCity/>
                 <div className="ui relaxed divided list" >
+
                     {allCities}
                 </div>
             </div>
