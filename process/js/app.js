@@ -1,5 +1,6 @@
 var React =  require('react');
 var ReactDOM = require('react-dom');
+var _ = reqiure('lodash');
 
 //import external subcomponent
 var CityList = require('./CityList');
@@ -48,6 +49,11 @@ var MainInterface = React.createClass({
               ]
         }
     },
+
+    deleteMessage: function(){
+        
+    }
+    ,
     render: function(){
         var allCities = this.state.data;
         // iterate/map through all cities
