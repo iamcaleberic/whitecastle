@@ -50,7 +50,8 @@ var MainInterface = React.createClass({
         // iterate/map through all cities
         allCities = allCities.map(function(item , index){
             return(
-                 
+                 <cityList key ={index}
+                singleItem = {item}/> 
             )// return
 
         }.bind(this));
