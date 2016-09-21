@@ -67,6 +67,13 @@ var MainInterface = React.createClass({
             cityBodyVisible: tempVisibility
         });
     }, 
+    addItem: function(tempItem){
+        var tempCities = this.state.data
+        tempCities.push(tempItem);
+        this.setState({
+            data: tempCities
+        });
+    }, 
 
     render: function(){
         var allCities = this.state.data;
@@ -86,6 +93,7 @@ var MainInterface = React.createClass({
                 <AddCity
                     bodyVisible = { this.state.cityBodyVisible }
                     handleToggle = {this.toggleAddDisplay}
+                    addCity = {this.addItem}
                 />
                 <div className="ui relaxed divided list" >
                     {allCities}

@@ -27,9 +27,9 @@ var AddCity =  React.createClass({
                 <div className="ui container" >
                 
                     <form className="ui basic form" onSubmit={this.handleAdd} >
-                        <div className="ui field">
+                        <div className="field">
                             <label>City</label>
-                            <input name="city" placeholder="City" type="text" ref="City"/>
+                            <input name="City" placeholder="City" type="text" ref="City"/>
                         </div>
                         <div className=" field">
                             <label>Description</label>
